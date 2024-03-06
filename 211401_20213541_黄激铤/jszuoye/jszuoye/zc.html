@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style type="text/css">
+    .zui {
+      margin-left: 36%;
+      margin-top: 200px;
+    }
+
+    .yi {
+      margin-left: 10%;
+    }
+
+    .er {
+      margin-left: 10%;
+    }
+
+    button {
+      float: left;
+      margin-top: -40px;
+      margin-left: 330px;
+    }
+  </style>
+</head>
+<body>
+<div class="zui">
+  <div class="yi">
+    <p>注册账号：<input type="zhang" value=""></p>
+  </div>
+  <div class="er">
+    <p>密码：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="mmss" value=""></p>
+  </div>
+  <button type="button" class="but">注册</button>
+</div>
+<script type="text/javascript">
+  let zhs = document.getElementsByTagName('input')[0];
+  let mms = document.getElementsByTagName('input')[1];
+  let but = document.getElementsByTagName('button')[0];
+  but.onclick = function() {
+    let zhss = zhs.value;
+    console.log(zhss);
+    let mmss = mms.value;
+    console.log(mmss);
+
+    let data = localStorage.getItem("data") == null? [] : JSON.parse(localStorage.getItem("data"));
+
+    if(data == null){
+      data= new Array();
+    }else{
+      data = JSON.parse(localStorage.getItem("data"));
+    }
+
+    let obj = {
+      zhang: zhss,
+      mima: mmss
+    }
+    data.push( obj )
+    let str = JSON.stringify(data);
+    localStorage.setItem("data", str);
+  }
+
+</script>
+
+</body>
+</html>

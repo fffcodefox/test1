@@ -1,0 +1,72 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<script>window.onload = function () {-->
+<!--  $(function () {-->
+<!--    var $arr = [];-->
+<!--    for (var i = 0; i < $("li[class]").length; i++) {-->
+<!--      $arr[i] = $("li[class]")[i].className-->
+<!--    }-->
+<!--    var l = $arr.length;-->
+<!--    var b_click;-->
+<!--    $("#next").on("click", function () {-->
+<!--      b_click = true;-->
+<!--      change()-->
+
+<!--    })-->
+<!--    $("#prev").on("click", function () {-->
+
+<!--      b_click = false;-->
+<!--      change();-->
+<!--    })-->
+<!--    function change() {-->
+<!--      if (b_click) {-->
+<!--        var $arr1 = $arr.slice(l - 1, l);-->
+<!--        var $arr2 = $arr.slice(0, l - 1);-->
+<!--        $arr = $arr1.concat($arr2);-->
+<!--      } else {-->
+<!--        var $arr1 = $arr.slice(0, 1);-->
+<!--        var $arr2 = $arr.slice(1, l);-->
+<!--        $arr = $arr2.concat($arr1);-->
+<!--      }-->
+<!--      $(ele).removeClass().addClass($arr[index])-->
+<!--    })-->
+<!--  }-->
+<!--})-->
+
+<!--var content = document.querySelector("#content");-->
+<!--var fw = document.querySelector("#float-window");-->
+<!--var img = document.querySelector("#search_img2");-->
+<!--var disX = 0;-->
+<!--var disY = 0;-->
+<!--var i = 0;-->
+<!--var timer = null;-->
+<!--//搜索栏拖拽效果-->
+<!--content.onmousedown = function (event) {-->
+<!--  var event = event || window.event;-->
+<!--  disX = event.clientX - content.offsetLeft;-->
+<!--  disY = event.clientY - content.offsetTop;-->
+<!--  document.onmousemove = function (event) {-->
+<!--    var event = event || window.event;-->
+<!--    content.style.left = event.clientX - disX + 'px';-->
+<!--    content.style.top = event.clientY - disY + 'px';-->
+<!--  }-->
+<!--  document.onmouseup = function () {-->
+<!--    document.onmousemove = null;-->
+<!--    document.onmouseup = null;-->
+<!--  }-->
+<!--}-->
+<!--//双击展开、合上搜索框-->
+<!--content.ondblclick = function () {-->
+<!--  clearInterval(timer);-->
+<!--  if (content.style.width == '200px') {-->
+<!--    timer = setInterval(function () {-->
+<!--      content.style.width = 50 + i + "px"-->
+<!--      i&#45;&#45;;-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
